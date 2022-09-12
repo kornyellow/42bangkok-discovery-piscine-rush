@@ -1,9 +1,30 @@
+let cookie = "";
+
+const changeCookie = (name) => {
+  cookie = name;
+  document.cookie = `name=${cookie}`;
+};
+
+if (document.cookie > 0) {
+  cookie = document.cookie.split(";")[0].split("=")[1];
+} else {
+  changeCookie("barw");
+}
+
 $(".nav-menu").click(() => {
   let name = $("#hamburger").attr("name");
   if (name === "close") {
     $("#hamburger").attr("name", "menu");
     $("#menu").removeClass("top-[80px]");
     $("#menu").removeClass("opacity-100");
+  }
+});
+
+$("#swap").click(() => {
+  if (cookie === "barw") {
+    changeCookie("korn");
+  } else if (cookie === "korn") {
+    changeCookie("barw");
   }
 });
 $("#hamburger").click(() => {

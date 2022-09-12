@@ -23,14 +23,11 @@
     <!-- Custom CSS -->
     <link href="./assets/stylesheet.css" rel="stylesheet" />
     <style type="text/tailwindcss">
-      body {
-        @apply bg-gray-800 text-white;
-      }
       .navbar {
-        @apply sticky top-0 h-[80px] w-screen bg-slate-900 text-white;
+        @apply sticky top-0 h-[80px] w-screen bg-black text-white;
       }
-      .nav-menu {
-        @apply border-b-4 hover:border-teal-400 border-slate-900 my-3 transition-all;
+      .nav-menu > span {
+        @apply border-b-4 hover:border-teal-400 md:border-slate-900 border-black my-3 transition-all cursor-pointer;
       }
       .nav-content {
         @apply max-w-[1500px] h-full mx-auto flex justify-between font-bold md:px-2 px-5;
@@ -62,46 +59,69 @@
     <div class="flex flex-col">
       <nav class="navbar">
         <div class="nav-content">
-          <button class="border-b-4 border-slate-900 py-3 text-2xl" id="logo">
+          <button class="border-b-4 border-black py-3 text-2xl" id="logo">
             YOUKNOWWHOAMI
           </button>
-
           <button
             class="flex my-auto border-[2px] p-1 text-4xl border-teal-400 rounded-md hover:bg-teal-400 md:hidden block"
           >
             <ion-icon name="menu" class="my-auto" id="hamburger"></ion-icon>
           </button>
           <ul
-            class="md:flex md:items-center md:space-x-5 z-[-1] md:z-auto md:static absolute md:bg-gray-800 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+            class="md:flex md:items-center md:space-x-5 z-[-1] md:z-auto md:static absolute bg-black w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
             id="menu"
           >
-            <li>
-              <button id="profile_btn" type="button" class="nav-menu">
-                Profile
-              </button>
+            <li id="profile_btn" class="nav-menu"><span>Profile</span></li>
+            <li id="experience_btn" class="nav-menu">
+              <span>Experience</span>
             </li>
-            <li>
-              <button id="experience_btn" type="button" class="nav-menu">
-                Experience
-              </button>
-            </li>
-            <li>
-              <button id="contact_btn" type="button" class="nav-menu">
-                Contact
-              </button>
-            </li>
+            <li id="contact_btn" class="nav-menu"><span>Contact</span></li>
           </ul>
         </div>
       </nav>
 
       <main class="w-screen">
-        <div class="max-w-[1500px] mx-auto">
-          <div id="profile" class="h-[calc(100vh-80px)] p-5">Profile</div>
+        <div class="mx-auto">
+          <div id="profile" class="h-[calc(100vh-80px)] md:flex">
+            <div class="space-y-3 md:text-3xl text-2xl md:w-1/2 md:p-20 p-5">
+              <p class="font-bold">
+                Hi! I Am
+                <button class="p-2 bg-red-500 text-white rounded-xl">
+                  🦇 BXDMAN
+                </button>
+              </p>
+              <p class="font-bold">Sirati&nbsp;&nbsp;Hiranthani</p>
+              <p class="text-sm">
+                <ion-icon name="chevron-forward-outline"></ion-icon> Barw <br />
+                <ion-icon name="chevron-forward-outline"></ion-icon> 2D Student
+                | CE KMITL <br />
+                <ion-icon name="chevron-forward-outline"></ion-icon> I want to
+                be a pentestration testing and full stack developer
+              </p>
+              <p class="md:text-left text-center">
+                <a
+                  href="https://github.com/BarwSirati"
+                  target="_blank"
+                  class="p-2 border-2 border-green-600 hover:text-white hover:bg-green-600 transition-all font-bold rounded-md items-center text-sm"
+                >
+                  Project
+                </a>
+              </p>
+            </div>
+            <div
+              style="
+                background-image: url('images/avatars/barw.jpg');
+                background-size: cover;
+                background-position: center;
+              "
+              class="md:w-1/2 w-full md:h-full h-[calc(100vh-350px)]"
+            ></div>
+          </div>
           <div id="experience" class="h-[calc(100vh-80px)] p-5">Experience</div>
           <div id="contact" class="h-[calc(100vh-80px)] p-5">Contact</div>
         </div>
       </main>
-      <footer class="w-screen bg-gray-900 p-20 text-center"></footer>
+      <footer class="w-screen bg-gray-900 p-10 text-center"></footer>
     </div>
   </body>
 </html>
