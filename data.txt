@@ -1,0 +1,17 @@
+Profile
+Image    : ./images/avatars/barw.jpg
+Name     : Sirati Hiranthani
+Nickname : Barw
+
+Skill
+MongoDB       100%
+NodeJS        100%
+Typescript     60%
+Nginx          60%
+Docker        100%
+HTML          100%
+Javascript    100%
+
+Contact
+Email  : 64010899@kmitl.ac.th
+Github : https://github.com/BarwSirati
