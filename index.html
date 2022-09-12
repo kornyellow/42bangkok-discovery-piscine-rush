@@ -4,33 +4,106 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>YOUKNOWWHOAMI</title>
 
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Icon -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link href="./assets/stylesheet.css" rel="stylesheet" />
+    <style type="text/tailwindcss">
+      body {
+        @apply bg-gray-800 text-white;
+      }
+      .navbar {
+        @apply sticky top-0 h-[80px] w-screen bg-slate-900 text-white;
+      }
+      .nav-menu {
+        @apply border-b-4 hover:border-teal-400 border-slate-900 my-3 transition-all;
+      }
+      .nav-content {
+        @apply max-w-[1500px] h-full mx-auto flex justify-between font-bold md:px-2 px-5;
+      }
+      .nav-mobile {
+        @apply hover:bg-gray-600 p-2 rounded-md transition-all;
+      }
+      .hamburger {
+        @apply space-y-2 my-auto border-[2px] border-teal-400 p-3 rounded-md hover:bg-teal-400 md:hidden block cursor-pointer;
+      }
+    </style>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <style>
-    body {
-      margin: 0px;
-    }
-    .sidebar {
-      min-width: 250px;
-      max-width: 250px;
-      min-height: 100vh;
-      background-color: #2e2e2e;
-    }
-    .content{
-      padding: 50px;
-    }
-  </style>
-  <body>
-    <div class="d-flex">
-      <div class="sidebar"></div>
-      <div class="content">Content</div>
+
+  <body class="h-screen w-screen">
+    <div class="flex flex-col">
+      <nav class="navbar">
+        <div class="nav-content">
+          <button class="border-b-4 border-slate-900 py-3 text-2xl" id="logo">
+            YOUKNOWWHOAMI
+          </button>
+
+          <button
+            class="flex my-auto border-[2px] p-1 text-4xl border-teal-400 rounded-md hover:bg-teal-400 md:hidden block"
+          >
+            <ion-icon name="menu" class="my-auto" id="hamburger"></ion-icon>
+          </button>
+          <ul
+            class="md:flex md:items-center md:space-x-5 z-[-1] md:z-auto md:static absolute md:bg-gray-800 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+            id="menu"
+          >
+            <li>
+              <button id="profile_btn" type="button" class="nav-menu">
+                Profile
+              </button>
+            </li>
+            <li>
+              <button id="experience_btn" type="button" class="nav-menu">
+                Experience
+              </button>
+            </li>
+            <li>
+              <button id="contact_btn" type="button" class="nav-menu">
+                Contact
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="w-screen">
+        <div class="max-w-[1500px] mx-auto">
+          <div id="profile" class="h-[calc(100vh-80px)] p-5">Profile</div>
+          <div id="experience" class="h-[calc(100vh-80px)] p-5">Experience</div>
+          <div id="contact" class="h-[calc(100vh-80px)] p-5">Contact</div>
+        </div>
+      </main>
+      <footer class="w-screen bg-gray-900 p-20 text-center"></footer>
     </div>
   </body>
 </html>
+
+<script src="./assets/script.js"></script>
