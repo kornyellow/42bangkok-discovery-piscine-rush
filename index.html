@@ -24,7 +24,7 @@
     <link href="./assets/stylesheet.css" rel="stylesheet" />
     <style type="text/tailwindcss">
       .navbar {
-        @apply sticky top-0 h-[80px] w-screen bg-black text-white;
+        @apply sticky top-0 h-[80px] w-screen bg-black text-white z-10;
       }
       .nav-menu > span {
         @apply border-b-4 hover:border-teal-400 md:border-slate-900 border-black my-3 transition-all cursor-pointer;
@@ -37,6 +37,13 @@
       }
       .hamburger {
         @apply space-y-2 my-auto border-[2px] border-teal-400 p-3 rounded-md hover:bg-teal-400 md:hidden block cursor-pointer;
+      }
+      .bar {
+        @apply w-full relative max-h-[20px] text-xl z-0;
+      }
+
+      .bar::before {
+        @apply max-h-[20px] flex absolute top-0 left-0 pr-[10px]  items-center text-white;
       }
     </style>
 
@@ -83,26 +90,62 @@
       <main class="w-screen">
         <div class="mx-auto">
           <div id="profile" class="h-[calc(100vh-80px)] md:flex">
-            <div class="space-y-3 md:text-3xl text-2xl md:w-1/2 md:p-20 p-5">
+            <div
+              class="space-y-3 md:text-5xl text-2xl md:w-1/2 w-full md:p-20 p-5"
+            >
               <p class="font-bold">
                 Hi! I Am
-                <button class="p-2 bg-red-500 text-white rounded-xl">
-                  🦇 BXDMAN
+                <button class="p-2 bg-teal-500 text-white rounded-xl px-4">
+                  SHIRANTH
                 </button>
               </p>
               <p class="font-bold">Sirati&nbsp;&nbsp;Hiranthani</p>
-              <p class="text-sm">
+              <p class="text-lg">
                 <ion-icon name="chevron-forward-outline"></ion-icon> Barw <br />
+                <ion-icon name="chevron-forward-outline"></ion-icon> 19 Years
+                Old <br />
                 <ion-icon name="chevron-forward-outline"></ion-icon> 2D Student
                 | CE KMITL <br />
                 <ion-icon name="chevron-forward-outline"></ion-icon> I want to
                 be a pentestration testing and full stack developer
               </p>
-              <p class="md:text-left text-center">
+              <br />
+              <p class="font-bold">I'm interested in</p>
+              <p class="text-lg">
+                <ion-icon name="chevron-forward-outline"></ion-icon> OWASP Top10
+                <br />
+                <ion-icon name="chevron-forward-outline"></ion-icon> Web
+                Hacking<br />
+                <ion-icon name="chevron-forward-outline"></ion-icon> Basic
+                Network <br />
+              </p>
+              <br />
+              <p class="font-bold">Ask me about</p>
+              <p class="text-lg">
+                <ion-icon name="chevron-forward-outline"></ion-icon> Javascript
+                <br />
+                <ion-icon name="chevron-forward-outline"></ion-icon> Typescript
+                <br />
+                <ion-icon name="chevron-forward-outline"></ion-icon> Docker
+                <br />
+                <ion-icon name="chevron-forward-outline"></ion-icon> Basic
+                Network
+                <br />
+                <ion-icon name="chevron-forward-outline"></ion-icon> Basic Web
+                Security
+              </p>
+              <p class="text-center space-x-5">
+                <a
+                  href="https://bxdman.com"
+                  target="_blank"
+                  class="p-2 border-2 border-fuchsia-600 hover:text-white hover:bg-fuchsia-600 transition-all font-bold rounded-md items-center text-lg"
+                >
+                  Domain
+                </a>
                 <a
                   href="https://github.com/BarwSirati"
                   target="_blank"
-                  class="p-2 border-2 border-green-600 hover:text-white hover:bg-green-600 transition-all font-bold rounded-md items-center text-sm"
+                  class="p-2 border-2 border-teal-600 hover:text-white hover:bg-teal-600 transition-all font-bold rounded-md items-center text-lg"
                 >
                   Project
                 </a>
@@ -110,18 +153,170 @@
             </div>
             <div
               style="
-                background-image: url('images/avatars/barw.jpg');
+                background-image: url('./images/avatars/barw.jpg');
                 background-size: cover;
                 background-position: center;
               "
-              class="md:w-1/2 w-full md:h-full h-[calc(100vh-350px)]"
+              class="md:w-1/2 w-full"
             ></div>
           </div>
-          <div id="experience" class="h-[calc(100vh-80px)] p-5">Experience</div>
-          <div id="contact" class="h-[calc(100vh-80px)] p-5">Contact</div>
+          <div id="experience" class="h-[calc(100vh-80px)] md:flex">
+            <div class="space-y-3 md:text-5xl text-2xl w-full md:p-20 p-5">
+              <div class="flex flex-col space-y-4">
+                <p class="font-bold">Programing Skill</p>
+                <div class="text-lg">
+                  <ion-icon name="chevron-forward-outline"></ion-icon> C++
+                  <progress
+                    before="70%"
+                    class="bar before:w-[70%] before:justify-end before:bg-pink-500 before:content-[attr(before)]"
+                  ></progress>
+                </div>
+                <div class="text-lg">
+                  <ion-icon name="chevron-forward-outline"></ion-icon> PHP
+                  <progress
+                    before="100%"
+                    class="bar before:w-[100%] before:justify-center before:bg-violet-700 before:content-[attr(before)]"
+                  ></progress>
+                </div>
+                <div class="text-lg">
+                  <ion-icon name="chevron-forward-outline"></ion-icon> NodeJS
+                  <progress
+                    before="100%"
+                    class="bar before:w-[100%] before:justify-center before:bg-yellow-500 before:content-[attr(before)]"
+                  ></progress>
+                </div>
+                <div class="text-lg">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                  Typescript
+                  <progress
+                    before="60%"
+                    class="bar before:w-[60%] before:justify-end before:bg-blue-500 before:content-[attr(before)]"
+                  ></progress>
+                </div>
+                <div class="text-lg">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                  Javascript
+                  <progress
+                    before="100%"
+                    class="bar before:w-[100%] before:justify-center before:bg-yellow-500 before:content-[attr(before)]"
+                  ></progress>
+                </div>
+                <br />
+                <p class="font-bold">Other Skill</p>
+                <div class="text-lg">
+                  <ion-icon name="chevron-forward-outline"></ion-icon> Docker
+                  <progress
+                    before="85%"
+                    class="bar before:w-[85%] before:justify-end before:bg-blue-500 before:content-[attr(before)]"
+                  ></progress>
+                </div>
+                <div class="text-lg">
+                  <ion-icon name="chevron-forward-outline"></ion-icon> BurpSuite
+                  <progress
+                    before="60%"
+                    class="bar before:w-[60%] before:justify-end before:bg-orange-500 before:content-[attr(before)]"
+                  ></progress>
+                </div>
+                <div class="text-lg">
+                  <ion-icon name="chevron-forward-outline"></ion-icon> MongoDB
+                  <progress
+                    before="100%"
+                    class="bar before:w-[100%] before:justify-center before:bg-green-600 before:content-[attr(before)]"
+                  ></progress>
+                </div>
+                <div class="text-lg">
+                  <ion-icon name="chevron-forward-outline"></ion-icon>
+                  SQL
+                  <progress
+                    before="100%"
+                    class="bar before:w-[100%] before:justify-center before:bg-pink-500 before:content-[attr(before)]"
+                  ></progress>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contact" class="h-[calc(100vh-80px)] md:flex">
+            <div class="space-y-3 md:text-5xl text-2xl w-full md:p-20 p-5">
+              <p class="font-bold">
+                Contact
+                <button class="p-2 bg-teal-500 text-white rounded-xl px-4">
+                  ME
+                </button>
+              </p>
+              <div class="flex justify-center md:space-x-8 md:space-y-0 space-y-3 space-x-0 items-center h-full md:flex-row flex-col">
+                <div
+                  class="p-10 py-5 bg-gray-900 text-white text-center rounded-xl font-bold text-xl"
+                >
+                  <div>
+                    <ion-icon name="logo-github" class="text-7xl"></ion-icon>
+                  </div>
+                  <p class="text-lg">BarwSirati</p>
+                  <p class="text-lg font-normal">All My Project In Here</p>
+                  <div>
+                    <button
+                      id="github"
+                      class="p-3 mt-5 rounded-md border-[1px] border-white hover:bg-gray-700 hover:border-gray-700"
+                    >
+                      Github
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="p-10 py-5 bg-orange-400 text-white text-center rounded-xl font-bold text-xl"
+                >
+                  <div>
+                    <ion-icon name="logo-instagram" class="text-7xl"></ion-icon>
+                  </div>
+                  <p class="text-lg">l3al2w</p>
+                  <p class="text-lg font-normal">You can see my life !!!</p>
+                  <div>
+                    <button
+                      id="ig"
+                      class="p-3 mt-5 rounded-md border-[1px] border-white hover:bg-orange-500 hover:border-orange-500"
+                    >
+                      Instagram
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="p-10 py-5 bg-blue-500 text-white text-center rounded-xl font-bold text-xl"
+                >
+                  <div>
+                    <ion-icon name="logo-facebook" class="text-7xl"></ion-icon>
+                  </div>
+                  <p class="text-lg">l3al2w</p>
+                  <p class="text-lg font-normal">Just Dummy Profile ??</p>
+                  <div>
+                    <button
+                      id="fb"
+                      class="p-3 mt-5 rounded-md border-[1px] border-white hover:bg-blue-700 hover:border-blue-700"
+                    >
+                      Facebook
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="p-10 py-5 bg-red-500 text-white text-center rounded-xl font-bold text-xl"
+                >
+                  <div>
+                    <ion-icon name="mail-outline" class="text-7xl"></ion-icon>
+                  </div>
+                  <p class="text-lg">64010899@kmitl.ac.th</p>
+                  <p class="text-lg font-normal">Offer your job</p>
+                  <div>
+                    <button
+                      id="mail"
+                      class="p-3 mt-5 rounded-md border-[1px] border-white hover:bg-red-600 hover:border-red-600"
+                    >
+                      E-mail
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
-      <footer class="w-screen bg-gray-900 p-10 text-center"></footer>
     </div>
   </body>
 </html>

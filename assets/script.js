@@ -11,6 +11,23 @@ if (document.cookie > 0) {
   changeCookie("barw");
 }
 
+$("#github").click(() => {
+  window.open("https://github.com/BarwSirati");
+});
+
+$("#ig").click(() => {
+  window.open("https://www.instagram.com/l3al2w/");
+});
+
+$("#fb").click(() => {
+  window.open("https://www.facebook.com/profile.php?id=100003566034104");
+});
+
+$("#mail").click(() => {
+  window.open("mailto:6401089@kmitl.ac.th");
+});
+
+
 $(".nav-menu").click(() => {
   let name = $("#hamburger").attr("name");
   if (name === "close") {

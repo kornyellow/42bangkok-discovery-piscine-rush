@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  api:
+    container_name: 42Bangkok_Rush
+    build:
+      context: ./
+      target: base
+    networks:
+      - nginx
+networks:
+  nginx:
+    name: nginx_reverse_default
+    driver: bridge
