@@ -40,10 +40,17 @@ $(".nav-menu").click(() => {
 $("#swap").click(() => {
   if (cookie === "barw") {
     changeCookie("korn");
+    $("#pan").css({
+      "transform": "translateX(-100vw)"
+    });
   } else if (cookie === "korn") {
     changeCookie("barw");
+    $("#pan").css({
+      "transform": "translateX(0)"
+    });
   }
 });
+
 $("#hamburger").click(() => {
   let name = $("#hamburger").attr("name");
   if (name === "menu") {
@@ -84,6 +91,6 @@ $("#contact_btn").click(function () {
 });
 
 $("#logo").click(function () {
-  $("html,body").animate({ scrollTop: 0 }, "slow");
+  $("html, body").animate({ scrollTop: 0 }, "slow");
   return false;
 });

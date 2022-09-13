@@ -57,6 +57,10 @@ body {
   transition: all 0.4s ease;
 }
 
+#pan {
+  transition: all 500ms;
+}
+
 /* Hamburger Lines - Top & Bottom */
 .menu-wrap .hamburger > div::before,
 .menu-wrap .hamburger > div::after {
