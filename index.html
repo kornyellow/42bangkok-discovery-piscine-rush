@@ -37,10 +37,10 @@
       .hamburger {
         @apply space-y-2 my-auto border-[2px] border-teal-400 p-3 rounded-md hover:bg-teal-400 md:hidden block cursor-pointer;
       }
-      .bar ::-webkit-progress-bar {
+      .bar,::-webkit-progress-bar {
         @apply w-full relative max-h-[20px] text-xl z-0;
       }
-      .bar::before ::-webkit-progress-value {
+      .bar::before,::-webkit-progress-value {
         @apply max-h-[20px] flex absolute top-0 left-0 pr-[10px]  items-center text-white;
       }
     </style>
