@@ -37,10 +37,10 @@
       .hamburger {
         @apply space-y-2 my-auto border-[2px] border-teal-400 p-3 rounded-md hover:bg-teal-400 md:hidden block cursor-pointer;
       }
-      .bar,::-webkit-progress-bar {
+      .bar {
         @apply w-full relative max-h-[20px] text-xl z-0;
       }
-      .bar::before,::-webkit-progress-value {
+      .bar::before {
         @apply max-h-[20px] flex absolute top-0 left-0 pr-[10px]  items-center text-white;
       }
     </style>
@@ -171,6 +171,8 @@
                       <ion-icon name="chevron-forward-outline"></ion-icon> C++
                       <progress
                         before="70%"
+                        max="100"
+                        value="70"
                         class="bar before:w-[70%] before:justify-end before:bg-pink-500 before:content-[attr(before)]"
                       ></progress>
                     </div>
@@ -178,6 +180,8 @@
                       <ion-icon name="chevron-forward-outline"></ion-icon> PHP
                       <progress
                         before="100%"
+                        max="100"
+                        value="100"
                         class="bar before:w-[100%] before:justify-center before:bg-violet-700 before:content-[attr(before)]"
                       ></progress>
                     </div>
