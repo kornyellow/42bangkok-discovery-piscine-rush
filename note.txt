@@ -1,3 +1,0 @@
-[DONE] Hamburger Menu + Responsive 
-[DONE] EDIT Smooth Scroll
-[PROCESS] ADD FOOTER ELEMENT 

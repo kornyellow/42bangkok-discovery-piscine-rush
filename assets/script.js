@@ -84,6 +84,16 @@ $("#profile_btn").click(function () {
     "slow"
   );
 });
+
+$("#profileB").click(function () {
+  $("html, body").animate(
+    {
+      scrollTop: $("#profile").offset().top - offset,
+    },
+    "slow"
+  );
+});
+
 $("#experience_btn").click(function () {
   $("html, body").animate(
     {
