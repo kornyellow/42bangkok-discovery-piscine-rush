@@ -52,14 +52,20 @@ $("#swap").click(() => {
   if (cookie === "barw") {
     changeCookie("korn");
     $("#pan").css({
-      "transform": "translateX(-100vw)",
       "-webkit-transform": "translateX(-100vw)",
+      "-moz-transform": "translateX(-100vw)",
+      "-ms-transform": "translateX(-100vw)",
+      "-o-transform": "translateX(-100vw)",
+      "transform": "translateX(-100vw)",
     });
   } else if (cookie === "korn") {
     changeCookie("barw");
     $("#pan").css({
-      "transform": "translateX(0)",
       "-webkit-transform": "translateX(0)",
+      "-moz-transform": "translateX(0)",
+      "-ms-transform": "translateX(0)",
+      "-o-transform": "translateX(0)",
+      "transform": "translateX(0)",
     });
   }
 });
