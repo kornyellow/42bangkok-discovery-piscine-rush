@@ -37,10 +37,10 @@
       .hamburger {
         @apply space-y-2 my-auto border-[2px] border-teal-400 p-3 rounded-md hover:bg-teal-400 md:hidden block cursor-pointer;
       }
-      .bar {
+      .bar ::-webkit-progress-bar {
         @apply w-full relative max-h-[20px] text-xl z-0;
       }
-      .bar::before {
+      .bar::before ::-webkit-progress-value {
         @apply max-h-[20px] flex absolute top-0 left-0 pr-[10px]  items-center text-white;
       }
     </style>
@@ -65,10 +65,8 @@
       <nav class="navbar">
         <div class="nav-content">
           <div>
-            <button class="pt-6 text-2xl" id="swap"><-></button>
-            <button class="pt-6 text-2xl" id="logo">
-              YOUKNOWWHOAMI
-            </button>
+            <button class="pt-6 text-2xl" id="swap">&#60;-&#62;</button>
+            <button class="pt-6 text-2xl" id="logo">YOUKNOWWHOAMI</button>
           </div>
           <button
             class="flex my-auto border-[2px] p-1 text-4xl border-teal-400 rounded-md hover:bg-teal-400 md:hidden block"
@@ -368,7 +366,8 @@
                     <ion-icon name="chevron-forward-outline"></ion-icon> 2D
                     Student | CE KMITL <br />
                     <ion-icon name="chevron-forward-outline"></ion-icon> I want
-                    to be software engineer graphic designer and full stack developer
+                    to be software engineer graphic designer and full stack
+                    developer
                   </p>
                   <br />
                   <p class="font-bold mb-2">I'm interested in</p>
@@ -443,14 +442,6 @@
                         class="bar before:w-[100%] before:justify-center before:bg-yellow-500 before:content-[attr(before)]"
                       ></progress>
                     </div>
-                    <div class="text-lg">
-                      <ion-icon name="chevron-forward-outline"></ion-icon>
-                      Typescript
-                      <progress
-                        before="60%"
-                        class="bar before:w-[60%] before:justify-end before:bg-blue-500 before:content-[attr(before)]"
-                      ></progress>
-                    </div>
                     <div class="text-lg mb-16">
                       <ion-icon name="chevron-forward-outline"></ion-icon>
                       Javascript
@@ -463,18 +454,26 @@
                     <p class="font-bold mb-5">Other Skill</p>
                     <div class="text-lg">
                       <ion-icon name="chevron-forward-outline"></ion-icon>
-                      Docker
+                      VIM
                       <progress
                         before="85%"
-                        class="bar before:w-[85%] before:justify-end before:bg-blue-500 before:content-[attr(before)]"
+                        class="bar before:w-[85%] before:justify-end before:bg-green-600 before:content-[attr(before)]"
                       ></progress>
                     </div>
                     <div class="text-lg">
                       <ion-icon name="chevron-forward-outline"></ion-icon>
-                      BurpSuite
+                      Manjaro Linux
                       <progress
-                        before="60%"
-                        class="bar before:w-[60%] before:justify-end before:bg-orange-500 before:content-[attr(before)]"
+                        before="100%"
+                        class="bar before:w-[100%] before:justify-center before:bg-green-600 before:content-[attr(before)]"
+                      ></progress>
+                    </div>
+                    <div class="text-lg">
+                      <ion-icon name="chevron-forward-outline"></ion-icon>
+                      Arch Linux
+                      <progress
+                        before="100%"
+                        class="bar before:w-[100%] before:justify-center before:bg-blue-600 before:content-[attr(before)]"
                       ></progress>
                     </div>
                     <div class="text-lg">
@@ -516,12 +515,12 @@
                           name="logo-github"
                         ></ion-icon>
                       </div>
-                      <p class="text-lg">BarwSirati</p>
+                      <p class="text-lg">kornyellow</p>
                       <p class="text-lg font-normal">All My Project In Here</p>
                       <div>
                         <button
                           class="p-3 mt-5 rounded-md border-[1px] border-white hover:bg-gray-700 hover:border-gray-700"
-                          id="github"
+                          id="Kgithub"
                         >
                           Github
                         </button>
@@ -536,34 +535,14 @@
                           name="logo-instagram"
                         ></ion-icon>
                       </div>
-                      <p class="text-lg">l3al2w</p>
+                      <p class="text-lg">korn.yellow</p>
                       <p class="text-lg font-normal">You can see my life !!!</p>
                       <div>
                         <button
                           class="p-3 mt-5 rounded-md border-[1px] border-white hover:bg-orange-500 hover:border-orange-500"
-                          id="ig"
+                          id="Kig"
                         >
                           Instagram
-                        </button>
-                      </div>
-                    </div>
-                    <div
-                      class="p-10 py-5 bg-blue-500 text-white text-center rounded-xl font-bold text-xl"
-                    >
-                      <div>
-                        <ion-icon
-                          class="text-7xl"
-                          name="logo-facebook"
-                        ></ion-icon>
-                      </div>
-                      <p class="text-lg">l3al2w</p>
-                      <p class="text-lg font-normal">Just Dummy Profile ??</p>
-                      <div>
-                        <button
-                          class="p-3 mt-5 rounded-md border-[1px] border-white hover:bg-blue-700 hover:border-blue-700"
-                          id="fb"
-                        >
-                          Facebook
                         </button>
                       </div>
                     </div>
@@ -576,12 +555,12 @@
                           name="mail-outline"
                         ></ion-icon>
                       </div>
-                      <p class="text-lg">64010899@kmitl.ac.th</p>
+                      <p class="text-lg">64010009@kmitl.ac.th</p>
                       <p class="text-lg font-normal">Offer your job</p>
                       <div>
                         <button
                           class="p-3 mt-5 rounded-md border-[1px] border-white hover:bg-red-600 hover:border-red-600"
-                          id="mail"
+                          id="Kmail"
                         >
                           E-mail
                         </button>

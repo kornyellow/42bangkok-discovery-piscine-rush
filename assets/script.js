@@ -24,9 +24,20 @@ $("#fb").click(() => {
 });
 
 $("#mail").click(() => {
-  window.open("mailto:6401089@kmitl.ac.th");
+  window.open("mailto:64010899@kmitl.ac.th");
 });
 
+$("#kgithub").click(() => {
+  window.open("https://github.com/kornyellow");
+});
+
+$("#kig").click(() => {
+  window.open("https://www.instagram.com/korn.yellow/");
+});
+
+$("#kmail").click(() => {
+  window.open("mailto:64010009@kmitl.ac.th");
+});
 
 $(".nav-menu").click(() => {
   let name = $("#hamburger").attr("name");
@@ -41,12 +52,12 @@ $("#swap").click(() => {
   if (cookie === "barw") {
     changeCookie("korn");
     $("#pan").css({
-      "transform": "translateX(-100vw)"
+      transform: "translateX(-100vw)",
     });
   } else if (cookie === "korn") {
     changeCookie("barw");
     $("#pan").css({
-      "transform": "translateX(0)"
+      transform: "translateX(0)",
     });
   }
 });
