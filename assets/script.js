@@ -52,12 +52,12 @@ $("#swap").click(() => {
   if (cookie === "barw") {
     changeCookie("korn");
     $("#pan").css({
-      transform: "translateX(-100vw)",
+      WebkitTransform: "translate3d(-100vw,0,0)",
     });
   } else if (cookie === "korn") {
     changeCookie("barw");
     $("#pan").css({
-      transform: "translateX(0)",
+      WebkitTransform: "translate3d(0vw,0,0)",
     });
   }
 });
